@@ -1,0 +1,27 @@
+{
+  "name": "background-movingcircle",
+  "version": "1.0.0",
+  "description": "a simple javascript plugin, Display moving dots as background\u001b[5~\u001b[D\u001b[5~\u001b[5~\u001b[5~\u001b[5~\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dand lines as background",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvplang/background-movingcircle.git"
+  },
+  "keywords": [
+    "js",
+    "canvas"
+  ],
+  "author": "zhaoxing lang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mvplang/background-movingcircle/issues"
+  },
+  "homepage": "https://github.com/mvplang/background-movingcircle#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2"
+  }
+}
