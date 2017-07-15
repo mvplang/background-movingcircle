@@ -9,7 +9,7 @@
         FPS : 60,                         //Default fps
         lineColor : 'rgba(0,0,0,.02)',    //Default color
         lineWidth : 1,                    //Default LineWidth
-        circleColor : 'rgba(0,0,0,.05)',  //Default CircleColor
+        circleColor : 'rgba(0,0,0,.02)',  //Default CircleColor
         canvas : document.getElementById('loiter'),   //Default Container
         mode : 'impact',                  //Default Collision mode option：impact | through
         circleArr : [],                   //Origin array
@@ -74,7 +74,7 @@
                 self.draw();
             },1000/self.FPS);
         },
-        // 
+
         line : function(x, y, _x, _y, o) {
             this.beginX = x;
             this.beginY = y;
@@ -82,7 +82,7 @@
             this.closeY = _y;
             this.o = o;
         },
-        //原点构造函数
+
         circle : function(x, y, r, moveX, moveY) {
             this.x = x;
             this.y = y;
@@ -90,12 +90,12 @@
             this.moveX = moveX;
             this.moveY = moveY;
         },
-        //生成随机数
+
         num : function(max, _min) {
             var min = arguments[1] || 0;
             return Math.floor(Math.random()*(max-min+1)+min);
         },
-        //绘制原点
+
         drawCircle : function(cxt, x, y, r, moveX, moveY) {
             var self = this;
             var circle = new self.circle(x, y, r, moveX, moveY);
@@ -105,7 +105,7 @@
             cxt.fill();
             return circle;
         },
-        //绘制线条
+
         drawLine : function(cxt, x, y, _x, _y, o) {
             var self = this;
             var line = new self.line(x, y, _x, _y, o);
@@ -116,7 +116,7 @@
             cxt.closePath();
             cxt.stroke();
         },
-        //初始化
+        
         init : function() {
             var self = this;
             self.circleArr = [];
@@ -124,7 +124,7 @@
                 self.circleArr.push(self.drawCircle(self.context, self.num(self.WIDTH), self.num(self.HEIGHT), self.num(15, 2), self.num(10, -10)/40, self.num(10, -10)/40));
             }
         },
-        //重绘
+        
         draw : function() {
             var self = this;
             self.context.clearRect(0,0,self.canvas.width, self.canvas.height);
